@@ -13,7 +13,7 @@ int Partition(int data[], int length, int start, int end)
     int small = start - 1; //
     for (index = start; index < end; ++index)
     {
-        if (data[index] < data[end]) //当前元素比标准值小
+        if (data[index] < data[end]) //当前元素比标准值小才需要++small
         {
             ++small;
             if (small != index)
@@ -22,8 +22,8 @@ int Partition(int data[], int length, int start, int end)
             }
         }
     }
-    ++small;
-    swap(&data[small], &data[end]);
+    ++small;                        //整个数组都遍历完成，需要把small向前移动一位
+    swap(&data[small], &data[end]); //把end和small位置的元素交换，因为原small位置的元素一定是大于end的，所以交换后以end元素为基准，左边的都小右边的都大
 
     return small;
 }
