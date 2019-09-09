@@ -33,3 +33,6 @@ std::make_heap(std::begin(numbers), std:rend(numbers));
 甚至还可以为元素的子集创建堆。
 
 */
+
+//堆不是容器，而是组织容器元素的一种特别方式
+
