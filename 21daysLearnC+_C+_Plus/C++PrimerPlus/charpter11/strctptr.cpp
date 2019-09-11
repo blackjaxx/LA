@@ -36,7 +36,7 @@ int main()
 }
 
 // show polar coordinates, converting angle to degrees
-void show_polar(const polar *pda)  //将形参声明为指向polar的指针，函数不应该修改结构，所以加const
+void show_polar(const polar *pda) //将形参声明为指向polar的指针，函数不应该修改结构，所以加const
 {
     using namespace std;
     const double Rad_to_deg = 57.29577951;
@@ -47,10 +47,10 @@ void show_polar(const polar *pda)  //将形参声明为指向polar的指针，�
 }
 
 // convert rectangular to polar coordinates
-void rect_to_polar(const rect *pxy, polar *pda)  //第一个指针指向要转换的结构，第二个指针指向存储转换结果的结构
+void rect_to_polar(const rect *pxy, polar *pda) //第一个指针指向要转换的结构，第二个指针指向存储转换结果的结构
 {
     using namespace std;
     pda->distance =
-        sqrt(pxy->x * pxy->x + pxy->y * pxy->y);  //函数不返回结构，而是修改已有结构
+        sqrt(pxy->x * pxy->x + pxy->y * pxy->y); //函数不返回结构，而是修改已有结构
     pda->angle = atan2(pxy->y, pxy->x);
 }
