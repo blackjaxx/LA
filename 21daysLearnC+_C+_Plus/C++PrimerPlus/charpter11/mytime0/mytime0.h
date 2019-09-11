@@ -11,9 +11,9 @@ class Time
         Time(int h,int m = 0);
         void AddMin(int m);
         void AddHr(int h);
-        void Resset(int h = 0,int m =0);
+        void Reset(int h = 0,int m =0);
         Time Sum(const Time &t) const;
-        void show() const;
+        void Show() const;
 };
 
 #endif
