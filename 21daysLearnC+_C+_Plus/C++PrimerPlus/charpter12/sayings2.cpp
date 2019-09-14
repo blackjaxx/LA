@@ -99,6 +99,11 @@ String *gleep = new String;
 String *glop = new String("my my my");  //invokes the String(const char *) constructor
 String *favorite = new String(sayings[choice]);  //invokes the String(const String &) constructor;
 
+可以通过->通过指针访问类方法
+if(sayings[i].length() < shortest->length())
 
+可以通过对象指针解除引用运算符（*）获得对象
+if(sayings[i] < *first)
+    first = &sayings[i];
 
 */
