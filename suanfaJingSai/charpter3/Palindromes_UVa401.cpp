@@ -30,10 +30,9 @@ ATOYOTA -- is a mirrored palindrome.
 #include <string.h>
 #include <ctype.h>
 const char *rev = "A 3 HIL JM O 2TUVWXY51SE Z 8 ";
-const char *msg[] = {"not a palindrome", "a regular palindrome", "a mirrored string"}
+const char *msg[] = {"not a palindrome", "a regular palindrome", "a mirrored string"};
 
-char
-r(char ch)
+char r(char ch)
 {
     if (isalpha(ch))
         return rev[ch - 'A'];
